@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개서</title>
+  <style>
+    /* 전체 배경 이미지 설정 */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('images/myself.png'); /* 배경 이미지 경로 */
+      background-size: cover; /* 화면 크기에 맞게 배경 이미지 크기 조정 */
+      background-position: center center; /* 배경 이미지가 화면 중앙에 위치 */
+      background-repeat: no-repeat; /* 배경 이미지 반복하지 않음 */
+      height: 100vh; /* 화면 전체 높이를 사용 */
+      margin: 0; /* 기본 여백 제거 */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* 푸터를 하단으로 배치 */
+    }
+
+    /* 메뉴 스타일 */
+.menu-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 버튼들이 가로로 중앙 정렬되도록 */
+  gap: 20px; /* 버튼 사이의 간격 */
+  flex-wrap: wrap; /* 작은 화면에서는 버튼이 줄바꿈 되도록 설정 */
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff; /* 버튼 배경색 */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #0056b3; /* 마우스 호버 시 색상 */
+}
+
+
+    /* Header 스타일 */
+    header {
+      display: flex;
+      justify-content: center; /* 가로 중앙 정렬 */
+      align-items: center; /* 세로 중앙 정렬 */
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* 배경을 약간 어두운 색으로 설정 */
+    }
+
+    /* 헤더의 타이틀 */
+    header h1 {
+      color: white;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    /* 명함 스타일 */
+.card {
+  display: flex; /* 이미지와 정보를 가로로 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  background-color: rgba(255, 255, 255, 0.9); /* 명함 배경색 */
+  border-radius: 10px;
+  padding: 20px;
+  width: 60%; /* 명함의 가로 크기를 60%로 줄임 */
+  max-width: 500px; /* 최대 가로 길이를 500px로 제한 */
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 80px; /* 이미지 크기 줄임 */
+  height: 80px;
+  border-radius: 50%; /* 원형 이미지 */
+  margin-right: 20px; /* 이미지와 텍스트 간 간격 */
+}
+
+.card .info h3 {
+  font-size: 22px; /* 이름 크기 줄임 */
+  color: #333;
+}
+
+.card .info p {
+  font-size: 14px; /* 텍스트 크기 줄임 */
+  color: #555;
+  margin: 5px 0;
+}
+
+.card .info strong {
+  color: #333;
+}
+
+
+    /* 자기소개 섹션 */
+    #about {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* 배경을 살짝 투명하게 설정 */
+      padding: 40px;
+      border-radius: 10px;
+      width: 80%;
+      margin: 50px auto;
+    }
+
+    /* 자기소개 섹션 제목 스타일 */
+    #about h2 {
+      color: #333;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    /* 자기소개 내용 스타일 */
+    #about p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* 푸터 스타일 */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+      width: 100%;
+    }
+
+    footer .container {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      /* 작은 화면에서 텍스트 크기 조정 */
+      header h1 {
+        font-size: 28px;
+      }
+
+      #about h2 {
+        font-size: 30px;
+      }
+
+      #about p {
+        font-size: 16px;
+      }
+
+      .menu a {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* 더 작은 화면에서 메뉴 버튼 크기 조정 */
+      header h1 {
+        font-size: 24px;
+      }
+
+      #about h2 {
+        font-size: 28px;
+      }
+
+      #about p {
+        font-size: 14px;
+      }
+
+      .menu a {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>자기소개서</h1>
+      <nav>
+        <ul class="menu">
+            <li><a href="index.html" class="btn">홈</a></li>
+            <li><a href="about.html" class="btn">자기소개</a></li>
+            <li><a href="skills.html" class="btn">기술 및 능력</a></li>
+            <li><a href="projects.html" class="btn">프로젝트</a></li>
+            <li><a href="contact.html" class="btn">연락처</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 명함 섹션 -->
+<section class="card">
+  <img src="images/voice_AI.png" alt="프로필 이미지"> <!-- 프로필 이미지 -->
+  <div class="info">
+    <h3>강민규</h3>
+    <p><strong>나이:</strong> 24</p>
+    <p><strong>학력:</strong> 3학년 , 대구대학교</p>
+    <p><strong>전공:</strong> 프로그래밍, AI학과</p>
+    <p><strong>한마디:</strong> 프로젝트에서 보여드리겠습니다.</p>
+  </div>
+</section>
+
+
+  <!-- 자기소개 섹션 -->
+  <section id="about">
+    <div class="container">
+      <h2>안녕하십니까!</h2>
+      <p>저는 게임 개발에 큰 열정을 가지고 있는 강민규입니다. 언리얼 엔진과 Unity를 공부하며 실제 게임 개발을 목표로 하고 있습니다.</p>
+      <p>게임 개발은 캐릭터 디자인, 웹 개발, 콘텐츠 기획이 어우러져 사람들에게 <strong>재미</strong>를 주는 것이 중요하다고 생각합니다.</p>
+      <p>앞으로 사용자 경험과 창의적 디자인을 바탕으로 게임 개발 분야에서 최고의 결과물을 만들어가겠습니다.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 강민규. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

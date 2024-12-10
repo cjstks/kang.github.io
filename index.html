@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강민규의 포트폴리오</title>
+  <style>
+/* 초기화 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 배경 이미지 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('images/back_image.png'); /* 배경 이미지 경로 */
+  background-size: cover; /* 화면 크기에 맞게 배경 이미지 크기 조정 */
+  background-position: center; /* 배경 이미지가 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 배경 이미지 반복하지 않음 */
+  height: 100vh; /* 화면 전체 높이를 사용 */
+  margin: 0; /* body의 기본 여백을 없앰 */
+}
+
+/* 히어로 섹션 배경 이미지 */
+#hero {
+  background-image: url('images/back_image.png'); /* 배경 이미지 경로 */
+  background-size: cover;
+  background-position: center; /* 배경 이미지가 화면 중앙에 위치 */
+  background-repeat: no-repeat;
+  padding: 80px 0; /* 적당한 여백을 추가 */
+  height: 100vh; /* 화면 전체 높이를 사용 */
+  position: relative; /* 오버레이를 위한 상대 위치 */
+}
+
+/* 배경 오버레이 */
+#hero::before {
+  content: ''; /* 빈 내용 */
+  position: absolute; /* 절대 위치 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 검정색 반투명 오버레이 */
+  z-index: 1; /* 텍스트가 오버레이 위로 오도록 설정 */
+}
+
+/* 텍스트 컨테이너 */
+#hero .container {
+  position: relative; /* 텍스트가 오버레이 위에 표시되도록 설정 */
+  z-index: 2; /* 텍스트가 오버레이 위에 보이게 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  color: #fff; /* 텍스트 색상 흰색 */
+}
+
+/* 텍스트 스타일 */
+#hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  padding-left: 20px; /* 오른쪽으로 약간 이동 */
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Header 스타일 */
+header {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 배경을 약간 어두운 색으로 설정 */
+  position: relative;
+}
+
+/* 헤더의 타이틀 */
+header h1 {
+  color: white;
+  font-size: 36px;
+  text-align: center; /* 오른쪽 정렬 */
+}
+
+/* 메뉴 스타일 */
+.menu-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 버튼들이 가로로 중앙 정렬되도록 */
+  gap: 20px; /* 버튼 사이의 간격 */
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff; /* 버튼 배경색 */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #0056b3; /* 마우스 호버 시 색상 */
+}
+
+/* 푸터 스타일 */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  width: 100%;
+  text-align: center;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  /* 헤더 타이틀 크기 줄이기 */
+  header h1 {
+      font-size: 28px;
+  }
+
+  /* 메뉴를 세로로 배치 */
+  .menu {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  /* 히어로 텍스트 크기 줄이기 */
+  #hero h2 {
+      font-size: 2rem;
+  }
+
+  #hero p {
+      font-size: 1rem;
+  }
+
+  /* 버튼 크기 조정 */
+  .btn {
+      padding: 8px 16px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 더 작은 화면에서 텍스트 크기 더 줄이기 */
+  #hero h2 {
+      font-size: 1.5rem;
+  }
+
+  #hero p {
+      font-size: 0.9rem;
+  }
+
+  /* 버튼 크기 더욱 줄이기 */
+  .btn {
+      padding: 6px 12px;
+      font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>강민규의 포트폴리오</h1>
+      <!-- 메뉴 스타일 -->
+<nav>
+    <ul class="menu">
+      <li><a href="index.html" class="btn">홈</a></li>
+      <li><a href="about.html" class="btn">자기소개</a></li>
+      <li><a href="skills.html" class="btn">기술 및 능력</a></li>
+      <li><a href="projects.html" class="btn">프로젝트</a></li>
+      <li><a href="contact.html" class="btn">연락처</a></li>
+    </ul>
+  </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section id="hero">
+        <div class="container">
+          <h2>안녕하세요! 게임 개발자를 꿈꾸는 강민규입니다.</h2>
+          <p>열정과 기술을 바탕으로 사람들에게 즐거움을 선사하는 게임을 개발을 하고 싶습니다.</p>
+          <a href="about.html" class="btn">자세히 보기</a>
+        </div>
+      </section>      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 강민규. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

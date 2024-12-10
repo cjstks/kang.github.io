@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연락처</title>
+  <style>
+    /* 전체 배경 이미지 설정 */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('images/call.png'); /* call.png 배경 이미지 */
+      background-size: cover; /* 배경 이미지가 화면 크기에 맞게 조정 */
+      background-position: center center; /* 배경 이미지가 화면 중앙에 위치 */
+      background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+      height: 100vh; /* 화면 전체 높이 */
+      margin: 0; /* 기본 여백 제거 */
+    }
+
+    /* Header 스타일 */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* 헤더 배경에 약간의 투명도 추가 */
+    }
+
+    /* 헤더의 타이틀 */
+    header h1 {
+      color: rgb(19, 18, 18);
+      font-size: 36px;
+      text-align: center;
+      color: white;
+    }
+
+    /* 메뉴 스타일 */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* 메뉴 항목을 가로로 중앙 정렬 */
+      gap: 20px;
+      flex-wrap: wrap; /* 모바일에서 메뉴 항목이 자동으로 줄바꿈 되도록 설정 */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      background-color: #007bff; /* 버튼 배경색 */
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #0056b3; /* 마우스 호버 시 색상 */
+    }
+
+    /* 연락처 섹션 스타일 */
+    #contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px; /* 위와 아래 여백을 설정하고, 양옆 여백은 조금 줄임 */
+    }
+
+    /* 연락처 내용 */
+    .contact-container {
+      background-color: rgba(255, 255, 255, 0.8); /* 배경을 약간 투명하게 설정 */
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%; /* 화면 크기에 맞게 폭을 90%로 설정 */
+      max-width: 600px; /* 최대 너비 설정 */
+    }
+
+    /* 연락처 제목 */
+    h2 {
+      font-size: 28px;
+      color: #181717;
+      margin-bottom: 20px;
+    }
+
+    /* 연락처 텍스트 */
+    p {
+      font-size: 18px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    /* 푸터 스타일 */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #e7d8d8;
+      color: white; /* 색상 지정 */
+      position: absolute; /* 화면 하단에 고정 */
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* footer 안의 .footer-container에도 color white 지정 */
+    .footer-container {
+      color: white; /* 하위 컨테이너에 흰색 텍스트 적용 */
+    }
+
+    /* 모바일 대응을 위한 미디어 쿼리 */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px; /* 모바일에서 타이틀 크기 조정 */
+      }
+
+      nav a {
+        font-size: 16px; /* 모바일에서 메뉴 글자 크기 줄이기 */
+        padding: 8px 15px; /* 버튼 크기 줄이기 */
+      }
+
+      .contact-container {
+        padding: 30px; /* 모바일에서 여백 조정 */
+        width: 95%; /* 화면 폭에 맞게 조정 */
+      }
+
+      footer {
+        font-size: 14px; /* 푸터 글자 크기 조정 */
+        padding: 15px 0; /* 푸터 크기 조정 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>연락처</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="about.html">자기소개</a></li>
+          <li><a href="skills.html">기술 및 능력</a></li>
+          <li><a href="projects.html">프로젝트</a></li>
+          <li><a href="contact.html">연락처</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="contact">
+    <div class="contact-container">
+      <h2>문의하기</h2>
+      <p>이메일: dcjstks5380@gmail.com</p>
+      <p>전화번호: 010-3820-0943</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 강민규. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
