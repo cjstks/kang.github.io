@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강민규의 포트폴리오 - 미래 계획</title>
+  <style>
+    /* 초기화 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 전체 페이지 레이아웃 */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('images/back_image.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* 메인 컨텐츠 중앙 정렬 */
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 히어로 섹션 */
+    #hero {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      position: relative;
+      margin-top: -10vh; /* Move the hero section up */
+    }
+
+    /* Add spacing between hero and future-plans */
+    main {
+      gap: 4rem; /* Creates space between hero and future-plans sections */
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    #hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    #hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    #hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* 미래 계획 섹션 */
+    #future-plans {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+    }
+  
+    #future-plans h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  
+    #future-plans ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+  
+    #future-plans li {
+      margin-bottom: 10px;
+    }
+  
+    /* 버튼 스타일 */
+    .btn {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* 푸터 스타일 */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: #fff;
+      width: 100%;
+    }
+
+    /* 모바일 반응형 스타일 */
+    @media (max-width: 768px) {
+      #future-plans h2 {
+        font-size: 2rem;
+      }
+
+      #future-plans ul {
+        font-size: 1rem;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #future-plans h2 {
+        font-size: 1.5rem;
+      }
+
+      #future-plans ul {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Content -->
+  <main>
+    <!-- 히어로 섹션 -->
+    <section id="hero">
+      <div class="container">
+        <h2>미래 계획</h2>
+        <p>게임 개발자와 웹 애플리케이션 개발자로서의 미래를 위한 계획을 소개합니다.</p>
+      </div>
+    </section>
+
+    <!-- 미래 계획 내용 -->
+    <section id="future-plans">
+      <div>
+        <h2>내가 이루고자 하는 목표들</h2>
+        <ul>
+          <li><strong>웹 프로젝트 완성:</strong> 다양한 웹 애플리케이션을 개발하고 사용자 경험을 고려한 직관적이고 반응형 디자인을 구현할 것입니다.</li>
+          <li><strong>게임 프로젝트 완성:</strong> 언리얼 엔진과 Unity를 활용하여 다양한 장르의 게임을 개발하고, 1인 게임 개발자로서 소규모 게임 프로젝트를 완성할 것입니다.</li>
+          <li><strong>1인 게임 개발 방향:</strong> 모든 개발 과정을 스스로 진행하여 독창적인 게임 아이디어를 실현하고 포트폴리오에 실을 수 있는 작품을 만들어 나갈 것입니다.</li>
+        </ul>
+        <a href="projects.html" class="btn">프로젝트 보기</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 강민규. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
